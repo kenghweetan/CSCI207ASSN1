@@ -1,0 +1,155 @@
+h1 {
+    align-self: flex-start;
+}
+
+h2 {
+    display: block;
+}
+
+.root {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    margin: 1rem;
+    color: rgb(39, 139, 129);
+}
+
+.filter-choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.filter-choices li {
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
+    max-width: 1280px;
+}
+
+.filter-toggle {
+    border-radius: 6px;
+    padding: 8px;
+    border-style: solid;
+    border-color: rgb(210, 113, 22);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.filter-toggle:hover,
+.filter-toggle.open {
+    background-color: rgb(210, 113, 22);
+    color: aliceblue;
+}
+
+
+.section {
+    display: flex;
+}
+
+.main-container {
+    max-width: 1920px;
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.filter-toggle {
+    align-self: flex-end;
+}
+
+.filters {
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    height: auto;
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-btn-grp {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.filters.open {
+    max-height: 1024px;
+}
+
+.card-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-wrap: normal;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.4 ease-in-out;
+}
+
+.filter-container {
+    position: sticky;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter li {
+    vertical-align: middle;
+}
+
+.card {
+    flex: 0 1 calc(33% - 20px);
+}
+
+.card .card-title {
+    color: rgb(210, 113, 22);
+    font-weight: 600;
+    font-size: 1.60rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    .card {
+        flex-basis: calc(33% - 20px);
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        flex-basis: calc(50% - 20px);
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .card {
+        flex-basis: calc(100% - 20px);
+        transition: all 0.2s ease-in-out;
+    }
+}

@@ -1,0 +1,246 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.root {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(151,
+            157,
+            166);
+}
+
+body * {
+    /* border: dotted red; */
+
+}
+
+#landing-page {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../pics/carbackground.jpeg");
+    position: relative;
+    /* Set a specific height */
+    height: 85vh;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: dotted red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    display: inline-block;
+}
+
+a {
+    display: inline;
+}
+
+section {
+    padding: 10px;
+}
+
+#landing-content:before {
+    content: '';
+    display: inline-block;
+    height: 40%;
+    vertical-align: middle;
+}
+
+/* Page content */
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1920px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    max-width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+    padding-top: 60px;
+}
+
+
+
+/* .nav-menu-button:hover {
+            background:rgb(0, 162, 184);
+        } */
+
+#landing-video {
+    height: 100%;
+    width: 100%;
+}
+
+#check {
+    display: none;
+}
+
+
+body.stop-transition * {
+    transition: none !important;
+}
+
+#partners {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#partners figcaption * {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+#partners ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+#partners img {
+    max-width: 300px;
+    max-height: 150px;
+}
+
+.landing-cta {
+    font-size: xx-large;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #049DBF;
+}
+
+.reviews-section {
+    margin-top: 20px;
+}
+
+.partners-heading {
+    text-align: left;
+}
+
+.partners-heading,
+.reviews-heading,
+.about-us-header {
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.reviews-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.card.review {
+    min-width: 30vw;
+    min-height: 30vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.review::before {
+    align-self: flex-start;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z'/%3E%3C/svg%3E");
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.review::after {
+    align-self: flex-end;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H320c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72zm-256 0c0 66.3-53.7 120-120 120H64c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64V160c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v32 32 72z'/%3E%3C/svg%3E");
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.about-us-wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 60px 1fr;
+    gap: 10px;
+    grid-template-areas: "header header header"
+        "img img content";
+}
+
+.about-us-img-wrapper {
+    grid-area: img;
+}
+
+.about-us-header {
+    grid-area: header;
+    font-size: 1.85rem;
+}
+
+.about-us-content {
+    grid-area: content;
+    justify-self: start;
+    align-self: center;
+    padding: 10px;
+}
+
+.links-and-socials-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.links-and-socials-wrapper svg {
+    padding: 5px;
+}
+
+
+
+.about-us-content p {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+p.tagline {
+    color: rgb(216, 104, 0);
+    font-weight: 800;
+    font-size: 3rem;
+}

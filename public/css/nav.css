@@ -1,0 +1,150 @@
+#brand {
+    max-width: 220px;
+}
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    min-height: 10px;
+    display: flex;
+    background: rgb(14, 15, 19);
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    position: relative;
+    width: 100%;
+    padding: 5px 20px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 9999;
+    transition: all 0.25s ease-in-out;
+}
+
+#navbar.sticky {
+    position: fixed;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
+#navbar.navbar-trans {
+    position: fixed;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(17, 17, 17, 0) 100%);
+}
+
+@media only screen and (max-width: 768px) {
+    /*     #navbar {
+        background: rgba(17, 17, 17, 0);
+    } */
+}
+
+
+/* Navbar links */
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.nav-link {
+    padding: 5px 1rem;
+    text-align: center;
+}
+
+#navbar a {
+    transition: font-size 0.25s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
+
+#navbar .backdrop-animate {
+    position: absolute;
+    background: rgba(126, 126, 126, 0.5);
+    border: 9px;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+.menu-button {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.menu-button div {
+    background: azure;
+    border: azure;
+    border: solid;
+    position: absolute;
+    border-radius: 8px;
+    border: 0;
+    width: 100%;
+    height: 2px;
+    transition: .25s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.bar1 {
+    top: 10%;
+}
+
+.bar2 {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bar3 {
+    bottom: 10%;
+}
+
+.change .bar1 {
+    top: 50%;
+    transform: translateY(-50%) rotatez(135deg);
+}
+
+
+.change .bar2 {
+    will-change: transform;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+
+.change .bar3 {
+    will-change: transform;
+    bottom: 50%;
+    transform: translateY(50%) rotatez(-135deg);
+}
+
+@media only screen and (min-width: 769px) {
+    .menu-button {
+        display: none;
+    }
+
+    .nav-container ul * {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .nav-container ul * {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+}

@@ -1,0 +1,93 @@
+.car-details-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(0, 112, 112);
+}
+
+h1 {
+    font-size: xxx-large;
+
+}
+
+h2 {
+    font-size: x-large;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.divider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.car-specifications-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.car-specifications-container ol {
+    list-style-type: none;
+}
+
+.booking-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: solid rgb(192, 192, 192);
+    border-width: 0.5px;
+}
+
+.booking-details-container * {
+    max-width: max-content;
+}
+
+.content-root-container {
+    width: 100%;
+    max-width: 1080px;
+    padding: 10px;
+}
+
+button {
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .divider {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .booking-details-container {
+        border-left: none;
+        border-top: solid rgb(192, 192, 192);
+        border-width: 0.5px;
+    }
+}
+
+select {
+    background: white;
+    box-shadow: none;
+    border-style: solid;
+    border-color: rgb(156, 156, 156);
+    border-width: 0.5px;
+    color: rgb(24, 24, 24);
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    padding: 3px;
+}

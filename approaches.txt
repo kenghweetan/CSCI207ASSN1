@@ -1,0 +1,11 @@
+{M M T T}
+- Model
+- Methodology
+- Tools
+- Techniques
+
+{P P D A}
+- Principal
+- Practise
+- Design
+- Application

@@ -1,0 +1,102 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(14, 15, 19);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "findus . links-and-socials ";
+    color: rgb(193,
+            212,
+            217);
+    font-weight: 400;
+    padding: 20px;
+}
+
+.find-us-wrapper {
+    grid-area: findus;
+    display: grid;
+    grid-template-rows: 2rem auto;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        "heading heading"
+        "map-address1 map-address2";
+    align-items: center;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "findus"
+            "links-and-socials ";
+        color: rgba(196, 237, 242, 1);
+        padding: 20px;
+    }
+
+    .find-us-wrapper {
+        grid-area: findus;
+        display: grid;
+        grid-template-rows: 2rem auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "heading"
+            "map-address1 "
+            "map-address2";
+
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.map-address-wrapper1 {
+    grid-area: map-address1;
+}
+
+.map-address-wrapper2 {
+    grid-area: map-address2;
+}
+
+.map-address-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.instagram {
+    fill: url(#rg);
+}
+
+.footer h2 {
+    color: rgb(4,
+            191,
+            173);
+    font-weight: 600;
+    font-size: 1.60rem;
+}
+
+.links-and-socials-wrapper {
+    grid-area: links-and-socials;
+    display: flex;
+    flex-direction: column;
+}
+
+.links-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}

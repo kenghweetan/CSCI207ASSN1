@@ -1,0 +1,42 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+}
+
+.user-profile {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 20px;
+
+}
+
+.user-profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "sidebar content";
+    padding: 10px;
+}
+
+.user-profile .content {
+    grid-area: content;
+    padding: 10px;
+}
+
+.user-profile .sidebar {
+    grid-area: sidebar;
+}
+
+.user-profile .content .profile-name {}
+
+.user-profile .content .profile-info {}
+
+.user-profile .content .current-rent {}

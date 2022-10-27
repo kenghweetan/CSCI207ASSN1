@@ -1,0 +1,14 @@
+.icon-in-text {
+    width: 1em;
+    height: 1em;
+    text-align: center;
+}
+
+.icon,
+.text {
+    vertical-align: middle;
+}
+
+.text {
+    display: block;
+}

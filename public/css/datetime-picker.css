@@ -1,0 +1,11 @@
+input[type="datetime-local"] {
+    background: white;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(156, 156, 156);
+    color: rgb(24, 24, 24);
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    padding: 3px;
+}

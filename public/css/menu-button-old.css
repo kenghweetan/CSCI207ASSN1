@@ -1,0 +1,40 @@
+.menu-button {
+    display: block;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+    cursor: pointer;
+}
+
+.menu-button div {
+    background: azure;
+    border: azure;
+    border: solid;
+    border-radius: 9px;
+    border-width: 0.5px;
+    width: 18px;
+    height: 1px;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.change .bar1 {
+    will-change: transform;
+    transform: translateY(6px) rotatez(45deg);
+}
+
+
+.change .bar2 {
+    will-change: transform;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+
+.change .bar3 {
+    will-change: transform;
+    transform: translateY(-6px) rotatez(-45deg);
+}

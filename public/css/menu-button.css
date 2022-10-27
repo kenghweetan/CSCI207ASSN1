@@ -1,0 +1,32 @@
+.menu-button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: dotted red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1px;
+}
+
+.menu-button div {
+    margin: 4px;
+    width: 30px;
+    height: 3px;
+    background: aliceblue;
+    border-radius: 9px;
+    transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.change .bar1 {
+    transform: translateY(15px) rotateZ(45px);
+}
+
+.change .bar2 {}
+
+
+.change .bar3 {
+    transform: translateY(-15px) rotatez(-45px);
+}

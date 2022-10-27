@@ -1,0 +1,261 @@
+body * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.credit-card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.credit-card-container {
+    --em: 16px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0px;
+    border: none;
+    width: fit-content;
+    max-width: 1024px;
+}
+
+.payment {
+    /*     margin-left: auto;
+    margin-right: auto; */
+    position: relative;
+    display: block;
+    height: fit-content;
+    padding-bottom: calc(var(--em) * 2.5);
+    padding-right: calc(var(--em) * 5.5);
+}
+
+.sparkasse {
+    font-family: 'Quicksand', sans-serif;
+    --primary-color: #790A10;
+    --secondary-color: #370D0F;
+    font-size: calc(var(--em) * 1);
+    color: white;
+}
+
+.sparkasse fieldset {
+    border: 0;
+}
+
+.sparkasse .logo * {
+    fill: white;
+}
+
+.sparkasse .logo svg {
+    height: calc(var(--em) * 4);
+}
+
+.sparkasse .card-type svg {
+    height: calc(var(--em) * 4);
+}
+
+.sparkasse.payment input,
+.sparkasse.payment select {
+    background: white;
+    box-shadow: none;
+}
+
+.sparkasse .card-number {
+    margin-top: calc(var(--em) * 2);
+}
+
+.sparkasse .holder-valid-container {
+    margin-top: calc(var(--em) * 2.3);
+}
+
+.sparkasse .cvc {
+    margin-top: calc(var(--em) * 9.5);
+}
+
+.payment input,
+.payment select {
+    font-size: calc(var(--em) * 1.2);
+    border: none;
+    border-radius: calc(var(--em) / 4);
+    height: calc(var(--em) * 2);
+    padding-left: calc(var(--em) * 3 /4);
+    background: rgba(255, 250, 251, .7);
+    box-shadow: inset 0px 0px 4px 1px rgba(119, 41, 62, 0.1);
+}
+
+.payment select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.payment input:focus,
+.payment select:focus {
+    outline-color: var(--secondary-color);
+    outline-style: solid;
+    outline-width: calc(var(--em) / 8);
+}
+
+.payment input[type="password"] {
+    font: small-caption;
+    font-size: calc(var(--em) * 2);
+}
+
+.front-card,
+.back-card {
+    position: relative;
+    width: calc(var(--em) * 33);
+    height: calc(var(--em) * 19);
+    border-radius: var(--em);
+    background-color: var(--primary-color);
+    border: calc(var(--em) / 8) solid var(--secondary-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    padding: var(--em);
+    margin: 0;
+    transition: all .3s;
+    overflow: hidden;
+}
+
+.front-card:focus-within,
+.back-card:focus-within {
+    transform: scale(1.01);
+}
+
+.front-card {
+    z-index: 1;
+}
+
+.back-card {
+    z-index: 0;
+    position: absolute;
+    top: calc(var(--em) * 2.5);
+    left: calc(var(--em) * 5.5);
+}
+
+.back-card:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: calc(var(--em) * 3);
+    height: calc(var(--em) * 4);
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+
+.header {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.logo svg {
+    height: calc(var(--em) * 2);
+}
+
+.space .card-type svg {
+    height: calc(var(--em) * 1.8);
+}
+
+.space .logo svg {
+    height: calc(var(--em) * 2.3);
+}
+
+.card-number {
+    margin-top: calc(var(--em) * 3.5);
+}
+
+.card-number__title,
+.card-holder__title,
+.valid-trhu__title,
+.cvc__title {
+    text-transform: uppercase;
+    margin-bottom: calc(var(--em) / 2);
+}
+
+.card-number__fields {
+    display: flex;
+    flex-flow: row;
+}
+
+.card-number__part,
+.valid-thru__part,
+.cvc__input {
+    width: calc(var(--em) * 4);
+}
+
+.card-number__part+.card-number__part {
+    margin-left: calc(var(--em) * 3 / 4);
+}
+
+.holder-valid-container {
+    display: flex;
+    flex-flow: row;
+    margin-top: calc(var(--em) * 2);
+    justify-content: space-between;
+}
+
+.card-holder {
+    display: flex;
+    flex-flow: column;
+    width: calc(var(--em) * 19.5);
+}
+
+.valid-thru {
+    margin-right: calc(var(--em) * 1);
+}
+
+.cvc {
+    margin-top: calc(var(--em) * 9.15);
+    margin-left: calc(var(--em) * 27);
+    display: flex;
+    flex-flow: column;
+}
+
+.svg-bg {
+    position: absolute;
+    z-index: 0;
+}
+
+.sparkasse {
+    position: relative;
+}
+
+.sparkasse .front-card:before {
+    content: "";
+    position: absolute;
+    width: calc(var(--em) * 50);
+    height: calc(var(--em) * 50);
+    border-radius: 50%;
+    background-color: #A81720;
+    top: calc(var(--em) * -32.8);
+    left: calc(var(--em) * -23.125);
+    z-index: -1;
+}
+
+.sparkasse .front-card:after {
+    content: "";
+    position: absolute;
+    width: calc(var(--em) * 50);
+    height: calc(var(--em) * 50);
+    border-radius: 50%;
+    background-color: #EA1320;
+    opacity: 0.2;
+    top: calc(var(--em) * 5);
+    left: calc(var(--em) * -12);
+    z-index: -1;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

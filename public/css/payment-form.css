@@ -1,7 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'open sans', sans-serif;
   font-size: 20px;
   font-weight: 500;
   box-sizing: border-box;
@@ -79,16 +79,13 @@
 
 input[type=text],
 input[type=datetime-local] {
-
   box-shadow: none;
   border-style: none;
-  background-color: rgb(193,
-      212,
-      217);
+  background-color: rgb(225, 225, 225);
   color: rgb(14,
       15,
       19);
-  font-family: 'Lato', sans-serif;
+  font-family: 'open sans', sans-serif;
   border-radius: 5px;
   padding: 12px;
   width: 100%;

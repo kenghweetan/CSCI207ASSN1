@@ -5,7 +5,7 @@ input[type="datetime-local"] {
     border-width: 0.5px;
     border-color: rgb(156, 156, 156);
     color: rgb(24, 24, 24);
-    font-family: 'Lato', sans-serif;
+    font-family: 'open sans', sans-serif;
     border-radius: 5px;
     padding: 3px;
 }

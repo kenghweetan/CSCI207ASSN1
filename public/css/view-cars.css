@@ -15,17 +15,31 @@ h2 {
     align-items: center;
 }
 
+.card-details {
+    display: flex;
+    justify-content: space-around;
+}
+
 .container h1 {
-    font-weight: 800;
-    font-size: 2rem;
+    font-weight: 900;
+    font-size: 3rem;
     margin: 1rem;
-    color: rgb(39, 139, 129);
+    color: rgb(2,
+            115,
+            115);
 }
 
 .filter-choices {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.filter-choices figcaption {
+    color: rgb(2,
+            115,
+            115);
+    font-weight: 400;
 }
 
 .filter-choices li {
@@ -127,7 +141,7 @@ h2 {
 }
 
 .card .card-title {
-    color: rgb(210, 113, 22);
+    color: rgb(2, 115, 115);
     font-weight: 600;
     font-size: 1.60rem;
 }
@@ -152,4 +166,8 @@ h2 {
         flex-basis: calc(100% - 20px);
         transition: all 0.2s ease-in-out;
     }
+}
+
+.card-title.car {
+    font-size: 1.4rem;
 }

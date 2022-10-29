@@ -1,77 +1,315 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-    color: rgb(0, 112, 112);
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: -webkit-linear-gradient(left, #003366,#004080,#0059b3
+, #0073e6);
+} */
+::selection {
+  background: #979DA6;
+  color: #fff;
 }
 
-.root {
-    overflow-y: hidden;
+.wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 390px;
+  background: rgb(245, 245, 245);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  height: auto;
+  max-height: fit-content;
+  transition: all 0.4s ease-in-out;
 }
 
-.login-container {
-    height: max-content;
-    width: max-content;
-    background-color: whitesmoke;
-    border-radius: 15px;
+.wrapper .title-text {
+  display: flex;
+  width: 200%;
 }
 
-.login-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 15px;
-    gap: 10px;
+.wrapper .title {
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-h1 {
-    font-weight: 600;
-    font-size: xx-large;
+.wrapper .slide-controls {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
 }
 
-input {
-    background: white;
-    border-color: aqua;
-    box-shadow: none;
-    border-style: solid;
-    border-color: rgb(156, 156, 156);
-    color: rgb(24, 24, 24);
-    font-family: 'Lato', sans-serif;
-    border-radius: 5px;
-    padding: 3px;
+.slide-controls .slide {
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
 }
 
-button {
-    background: white;
-    border-color: aqua;
-    box-shadow: none;
-    border-style: solid;
-    border-color: rgb(156, 156, 156);
-    color: rgb(24, 24, 24);
-    font-family: 'Lato', sans-serif;
-    border-radius: 5px;
-    padding: 3px;
+.slide-controls label.signup {
+  color: #000;
 }
+
+.slide-controls .slider-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 15px;
+  background: rgb(2, 115, 115);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#signup:checked~.slider-tab {
+  left: 50%;
+}
+
+#signup:checked~label.signup {
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+
+#signup:checked~label.login {
+  color: #000;
+}
+
+#login:checked~label.signup {
+  color: #000;
+}
+
+#login:checked~label.login {
+  cursor: default;
+  user-select: none;
+}
+
+.wrapper .form-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-container .form-inner {
+  display: flex;
+  width: 200%;
+}
+
+.form-container .form-inner form {
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-inner form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-inner form .field.license {
+  height: 75px;
+  width: 100%;
+  margin-top: 20px;
+
+}
+
+.form-inner form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+}
+
+.form-inner form .field input[type="file"] {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  color: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  height: 50px;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+  background-color: white;
+}
+
+.form-inner form input::file-selector-button {
+  vertical-align: middle;
+  border: none;
+  height: 50px;
+  background-color: transparent;
+  color: #999;
+}
+
+.form-inner form .field input:focus {
+  border-color: #979DA6;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+.form-inner form .field input::placeholder {
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder {
+  color: #979DA6;
+}
+
+.form-inner form .pass-link {
+  margin-top: 5px;
+}
+
+.form-inner form .signup-link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+  color: #1a75ff;
+  text-decoration: none;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+form .login-modal-btn {
+  height: 50px;
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+form .login-modal-btn .login-modal-btn-layer {
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: rgb(2, 115, 115);
+  border-radius: 15px;
+  transition: all 0.4s ease;
+
+}
+
+form .login-modal-btn:hover .login-modal-btn-layer {
+  left: 0;
+}
+
+form .login-modal-btn input[type="submit"] {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: rgb(2, 115, 115);
+}
+
 
 .login-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  color: #04BFAD
 }
 
 .login-modal.show {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-modal .wrapper {
+  position: relative;
+}
+
+.login-modal .wrapper .close-login {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.login-modal .wrapper .close-login svg {
+  width: 30px;
+  height: 30px;
+}
+
+.user-icon {
+  width: 25px;
+  height: 25px;
+}
+
+#login-button {
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255)
+}
+
+#signout-button {
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255)
+}
+
+.nav-container .nav-link.hide {
+  display: none;
+}
+
+.field-wrapper {
+  height: auto;
+  max-height: 0;
+  transition: all 0.4s ease-in-out;
 }

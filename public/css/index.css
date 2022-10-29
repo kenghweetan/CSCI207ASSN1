@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'open sans', sans-serif;
     font-size: 20px;
     font-weight: 500;
     box-sizing: border-box;
@@ -18,9 +18,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(151,
-            157,
-            166);
+    background-color: rgb(245, 245, 245);
 }
 
 body * {
@@ -243,4 +241,8 @@ p.tagline {
     color: rgb(216, 104, 0);
     font-weight: 800;
     font-size: 3rem;
+}
+
+#id-button {
+    background: none;
 }

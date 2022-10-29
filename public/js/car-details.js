@@ -12,6 +12,14 @@ function handleChange(event) {
   } else {
     document.getElementById("serangoon-map").style.display = "none";
     document.getElementById("toa-payoh-map").style.display = "block";
-    document.get
+    document.get;
   }
 }
+
+document.getElementById("booknow-button").addEventListener("click", () => {
+  if (localStorage.getItem("username")) {
+    window.location.href = "payment.html";
+  } else {
+    document.getElementById("login-button").click();
+  }
+});

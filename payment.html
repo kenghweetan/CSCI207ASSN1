@@ -56,7 +56,7 @@
 
                 <div class="col-75">
                     <div class="container">
-                        <form action="/action_page.php">
+                        <form onsubmit="showPaymentDialog(); return false">
                             <h1>Complete your reservation</h1>
                             <div class="row">
                                 <div class="col-50">
@@ -106,7 +106,8 @@
                                             <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                             <path
                                                 d="M64 32C28.7 32 0 60.7 0 96v32H576V96c0-35.3-28.7-64-64-64H64zM576 224H0V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V224zM112 352h64c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm112 16c0-8.8 7.2-16 16-16H368c8.8 0 16 7.2 16 16s-7.2 16-16 16H240c-8.8 0-16-7.2-16-16z" />
-                                        </svg> Payment</h3>
+                                        </svg> Reservation Deposit</h3>
+                                    <input type="text" id="adr" name="address" value="$50.00" disabled>
                                     <div class="credit-card-wrapper">
                                         <div class="credit-card-container">
                                             <div class="payment sparkasse">
@@ -228,7 +229,7 @@
                             </div>
                             <div class="col-50">
 
-                                <input type="submit" value="Reserve with Credit Card" class="btn">
+                                <input type="submit" value="Reserve with Credit Card" id="payment-button" class="btn">
                             </div>
                         </form>
                     </div>
@@ -371,10 +372,27 @@
                 </div>
             </div>
         </div>
+        <div class="payment-modal">
+            <div class="payment-wrapper">
+                <div class="circle-loader">
+                    <div class="checkmark draw"></div>
+                </div>
 
+                <div class="payment-content">
+                    <h1>Payment Complete</h1>
+                    <p>Your vehicle has been reserved.</p>
+                    <br />
+                    <p>Final payment will be made after your rental ends and the
+                        vehicle has been inspected.</p>
+                    <button id="close-payment" class="btn">Back to Home</button>
+                </div>
+
+            </div>
+        </div>
     </div>
     <script src="public/js/login.js"></script>
-
+    <script src="public/js/index.js"></script>
+    <script src="public/js/payment.js"></script>
     <script src="public/js/creditCard.js"></script>
 </body>
 

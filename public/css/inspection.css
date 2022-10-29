@@ -73,22 +73,23 @@
     height: auto;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    background-color: #FFF;
+    transition: all 0.75s ease-in-out;
     box-shadow: 0 0.1px 8px rgb(156, 156, 156);
 }
 
 #show-inspection {
     position: relative;
     background-color: rgb(4, 191, 173);
-    font-weight: 800;
-    font-size: 2rem;
+    font-weight: 400;
+    font-size: 1em;
     height: fit-content;
     width: fit-content;
     border: none;
     transition: all 0.4s ease-in-out;
     vertical-align: middle;
-    padding: 20px;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -217,11 +218,11 @@
     color: rgb(255, 255, 255)
 }
 
-.total-charges {
+.total-charges,
+.general-info {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 20px;
 }
 
 .total-charges .line-item {
@@ -229,6 +230,10 @@
     justify-content: space-between;
 }
 
+.general-info .line-item {
+    display: flex;
+    justify-content: space-between;
+}
 
 .total-charges .line-item:last-child {
     border-top: solid 0.5px rgb(151, 157, 166);
@@ -246,9 +251,182 @@
     align-items: center;
     width: min-content;
     overflow: visible;
+    padding: 20px;
     width: 768px;
 }
 
 .inspection-card:hover {
     transform: none;
+}
+
+.inspection-card .title {
+    color: rgb(2,
+            115,
+            115);
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.circle-loader {
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left-color: #5cb85c;
+    animation: loader-spin 1.2s infinite linear;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 7em;
+    height: 7em;
+}
+
+.load-complete {
+    -webkit-animation: none;
+    animation: none;
+    border-color: #5cb85c;
+    transition: border 500ms ease-out;
+}
+
+.checkmark {
+    display: none;
+}
+
+.checkmark.draw:after {
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-name: checkmark;
+    transform: scaleX(-1) rotate(135deg);
+}
+
+.checkmark:after {
+    opacity: 1;
+    height: 3.5em;
+    width: 1.75em;
+    transform-origin: left top;
+    border-right: 3px solid #5cb85c;
+    border-top: 3px solid #5cb85c;
+    content: "";
+    left: 1.75em;
+    top: 3.5em;
+    position: absolute;
+}
+
+@keyframes loader-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes checkmark {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 1;
+    }
+
+    20% {
+        height: 0;
+        width: 1.75em;
+        opacity: 1;
+    }
+
+    40% {
+        height: 3.5em;
+        width: 1.75em;
+        opacity: 1;
+    }
+
+    100% {
+        height: 3.5em;
+        width: 1.75em;
+        opacity: 1;
+    }
+}
+
+.invoice-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
+}
+
+.invoice-modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.invoice-modal .invoice-wrapper {
+    position: relative;
+    background-color: rgb(245, 245, 245);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 480px;
+}
+
+.invoice-modal .invoice-wrapper #toggle {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.invoice-wrapper h1 {
+    color: rgb(2,
+            115,
+            115);
+    width: 100%;
+    font-weight: 800;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.invoice-content {
+    max-height: 0;
+    height: auto;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+.invoice-content.show {
+    max-height: 500px;
+}
+
+.invoice-content * {
+    text-align: center;
+}
+
+.invoice-content p:first-child {
+    color: #444444;
+
+    font-weight: 600;
+}
+
+.invoice-content p:last-child {
+    color: #4d4d4d;
+    font-weight: 300;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.invoice-content #close-invoice {
+    width: 100%;
 }

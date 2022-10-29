@@ -20,7 +20,7 @@
 
 .user-profile {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 20% 80%;
     grid-template-rows: 1fr;
     grid-template-areas: "sidebar content";
     padding: 10px;
@@ -128,6 +128,130 @@ path {
     filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
 }
 
+.rental-table {
+    background-color: white;
+    border-collapse: collapse;
+}
+
+.rental-table .details {
+    background-color: white;
+}
+
+.rental-table .details:nth-child(even) {
+    background-color: rgb(213, 235, 240)
+}
+
+
+.rental-table thead {
+    background-color: rgba(2,
+            115,
+            115);
+}
+
+.rental-table td,
+.rental-table th {
+    padding: 40px;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.rental-table td *,
+.rental-table th * {
+    vertical-align: middle;
+}
+
+.rental-table td {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+
+.rental-table th {
+    color: rgb(255, 255, 255)
+}
+
+.inspection,
+.paid,
+.cancelled,
+.rent,
+.sent {
+    border-radius: 50%;
+    height: 0.75em;
+    width: 0.75em;
+    display: inline-block;
+
+    margin-right: 0.75em;
+}
+
+.cancelled {
+    background-color: rgb(165, 165, 165);
+}
+
+.paid {
+    background-color: rgb(77, 222, 33);
+}
+
+.sent {
+    background-color: rgb(34, 144, 212);
+}
+
+.inspection {
+    background-color: rgb(255, 0, 0);
+}
+
+.rent {
+    background-color: rgb(255, 181, 34);
+}
+
+.inspection a {
+    text-decoration: none;
+    color: rgb(255, 170, 0);
+}
+
+.rental-table-wrapper {
+    border-radius: 20px;
+    max-width: fit-content;
+    box-shadow: 0 0.075px 4px rgb(195, 195, 195);
+}
+
+.current-rentals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.rental-table-wrapper .serial {
+    font-weight: 600;
+
+}
+
+.rental-table tr:first-child th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.rental-table tr:first-child th:last-child {
+    border-top-right-radius: 20px;
+}
+
+.rental-table tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.rental-table tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
+
+.rental-table .details:hover {
+    transform: scale(1.015);
+    box-shadow: 0 0.1px 2px rgb(156, 156, 156);
+    transition: all 100ms ease-in-out;
+    border-top: none;
+    border-bottom: none;
+    z-index: 20;
+}
+
 /* .portada:after {
     content: '';
     position: absolute;
@@ -144,17 +268,3 @@ path {
     transform: skew(-45deg);
     z-index: -1;
 } */
-
-button {
-    border: none;
-    background: none;
-    font-size: 24px;
-    color: #8bc34a;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-button:hover {
-    color: #4CAF50;
-    transform: rotate(22deg);
-}

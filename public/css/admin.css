@@ -1,6 +1,5 @@
 .rental-table {
     background-color: white;
-    border-radius: 20px;
     border-collapse: collapse;
 }
 
@@ -43,7 +42,8 @@
 .inspection,
 .paid,
 .cancelled,
-.rent {
+.rent,
+.sent {
     border-radius: 50%;
     height: 0.75em;
     width: 0.75em;
@@ -60,6 +60,10 @@
     background-color: rgb(77, 222, 33);
 }
 
+.sent {
+    background-color: rgb(34, 144, 212);
+}
+
 .inspection {
     background-color: rgb(255, 0, 0);
 }
@@ -72,6 +76,42 @@
     text-decoration: none;
     color: rgb(255, 170, 0);
 }
+
+.rental-table-wrapper {
+    border-radius: 20px;
+    max-width: fit-content;
+    box-shadow: 0 0.075px 4px rgb(195, 195, 195);
+}
+
+.current-rentals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.rental-table-wrapper .serial {
+    font-weight: 600;
+
+}
+
+.rental-table tr:first-child th:first-child {
+    border-top-left-radius: 20px;
+}
+
+.rental-table tr:first-child th:last-child {
+    border-top-right-radius: 20px;
+}
+
+.rental-table tr:last-child td:first-child {
+    border-bottom-left-radius: 20px;
+}
+
+.rental-table tr:last-child td:last-child {
+    border-bottom-right-radius: 20px;
+}
+
 
 .rental-table .details:hover {
     transform: scale(1.015);
@@ -103,8 +143,11 @@
 
 .main {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1920px;
     height: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
 .user-profile {
@@ -117,7 +160,7 @@
 
 .user-profile {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "sidebar content";
     padding: 10px;
@@ -130,6 +173,16 @@
 
 .user-profile .sidebar {
     grid-area: sidebar;
+}
+
+.current-rentals .title {
+    font-weight: 800;
+    font-size: 4em;
+    color: rgb(2,
+            115,
+            115);
+    text-align: center;
+    width: 100%;
 }
 
 .user-profile .content .profile-name {}

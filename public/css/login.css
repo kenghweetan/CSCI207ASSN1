@@ -223,7 +223,7 @@ form .login-modal-btn .login-modal-btn-layer {
   position: absolute;
   left: -100%;
   background: rgb(2, 115, 115);
-  border-radius: 15px;
+  border-radius: 5px;
   transition: all 0.4s ease;
 
 }
@@ -259,7 +259,7 @@ form .login-modal-btn input[type="submit"] {
   z-index: 999999;
   background-color: rgba(0, 0, 0, 0.8);
   overflow-y: auto;
-  color: #04BFAD
+  color: rgb(2, 115, 115);
 }
 
 .login-modal.show {
@@ -295,13 +295,15 @@ form .login-modal-btn input[type="submit"] {
 #login-button {
   background-color: transparent;
   border: none;
-  color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 #signout-button {
   background-color: transparent;
   border: none;
-  color: rgb(255, 255, 255)
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .nav-container .nav-link.hide {

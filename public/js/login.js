@@ -94,6 +94,12 @@ function handleSignout() {
   document.querySelector(".nav-link.user-profile-link").classList.add("hide");
   document.querySelector(".nav-link.signout").classList.add("hide");
   document.querySelector(".nav-link.login").classList.remove("hide");
+  document.querySelectorAll(".admin-link").forEach((element) => {
+    element.classList.add("hide");
+  });
+  document.querySelectorAll(".user-link").forEach((element) => {
+    element.classList.add("hide");
+  });
 }
 
 function isLoggedIn() {

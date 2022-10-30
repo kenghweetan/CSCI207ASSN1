@@ -1,0 +1,200 @@
+div.pricing {
+    --card-height: 350px;
+
+}
+
+section.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 360px;
+}
+
+.l-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    width: 100%;
+    min-height: 200px;
+    max-width: 1200px;
+    padding: 30px;
+}
+
+@media screen and (max-width: 760px) {
+    .l-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.b-price-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: calc(var(--card-height) *1.10);
+    perspective: 1000px;
+}
+
+.b-price-card__cover {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--card-height);
+    overflow: hidden;
+    background-image: linear-gradient(120deg, white 0%, #C1D4D9 100%);
+    background-size: cover;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    will-change: transform;
+    transform: skewX(0.001deg);
+    transition: transform 0.35s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.b-price-card-price {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h5.tier {
+    color: black;
+    font-size: 24px;
+}
+
+p.price {
+    color: black;
+    font-size: 36px;
+}
+
+.b-price-card_cover .tier,
+.b-price-card_cover .price {
+    color: white;
+    z-index: 70;
+}
+
+.b-price-card__cover::after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(var(--card-height) * 1.20);
+    background: linear-gradient(226deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 35%, rgba(255, 255, 255, 0.2) 42%, rgba(255, 255, 255, 0) 60%);
+    transform: translateY(-20%);
+    will-change: transform;
+    transition: transform 0.65s cubic-bezier(0.18, 0.9, 0.58, 1);
+}
+
+.b-price-card:hover .b-price-card__cover {
+    transform: rotateX(7deg) translateY(-6px);
+}
+
+.b-price-card:hover .b-price-card__cover::after {
+    transform: translateY(0%);
+}
+
+.b-price-card::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: calc(var(--card-height) * 0.90);
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 12px 12px rgba(0, 0, 0, 0.4);
+    will-change: opacity;
+    transform-origin: top center;
+    transform: skewX(0.001deg);
+    transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.b-price-card:hover::before {
+    opacity: 0.6;
+    transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.pricing-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing-box {
+    /* background-color: #979DA6; */
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    flex: 1;
+    padding: 0 30px 30px;
+    min-width: 250px;
+    height: var(--card-height);
+}
+
+.pricing-box h5 {
+    text-transform: uppercase;
+}
+
+.price {
+    margin: 24px 0;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.price sub,
+.price sup {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.features-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+/* .pricing-box-bg-image {
+    background-image: url('https://images.unsplash.com/photo-1550029402-226115b7c579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80');
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+} */
+
+.pricing-box-bg-image .features-list li {
+    border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+.pricing-box-bg-image .btn-primary {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.pricing-wrapper {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}

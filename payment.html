@@ -153,15 +153,19 @@
                                                     </div>
                                                     <fieldset class="card-number card-number__fields">
                                                         <legend class="card-number__title">CARD NUMBER</legend>
-                                                        <input type="tel" class="card-number__part" maxlength="4">
-                                                        <input type="tel" class="card-number__part" maxlength="4">
-                                                        <input type="tel" class="card-number__part" maxlength="4">
-                                                        <input type="tel" class="card-number__part" maxlength="4">
+                                                        <input type="tel" class="card-number__part" maxlength="4"
+                                                            required>
+                                                        <input type="tel" class="card-number__part" maxlength="4"
+                                                            required>
+                                                        <input type="tel" class="card-number__part" maxlength="4"
+                                                            required>
+                                                        <input type="tel" class="card-number__part" maxlength="4"
+                                                            required>
                                                     </fieldset>
                                                     <div class="holder-valid-container">
                                                         <label class="card-holder">
                                                             <span class="card-holder__title">CARD HOLDER</span>
-                                                            <input name="ccname" autocomplete="cc-name" />
+                                                            <input name="ccname" autocomplete="cc-name" required />
                                                         </label>
                                                         <fieldset class="valid-thru">
                                                             <legend class="valid-trhu__title">VALID THRU</legend>
@@ -169,7 +173,7 @@
                                                                 <label>
                                                                     <span class="sr-only">Month</span>
                                                                     <select class="valid-thru__part month"
-                                                                        id="valid-thru_part1">
+                                                                        id="valid-thru_part1" required>
                                                                         <optgroup label="Month">
                                                                             <option value="" style="display:none"
                                                                                 disabled selected>
@@ -192,7 +196,7 @@
                                                                 <label>
                                                                     <span class="sr-only">Year</span>
                                                                     <select class="valid-thru__part year"
-                                                                        id="valid-thru_part2">
+                                                                        id="valid-thru_part2" required>
                                                                         <optgroup label="Year">
                                                                             <option value="" style="display:none"
                                                                                 disabled selected>
@@ -214,7 +218,7 @@
                                                     <label class="cvc">
                                                         <span class="cvc__title">CVC</span>
                                                         <input class="cvc__input" type="password" name="cvc"
-                                                            maxlength="3" />
+                                                            maxlength="3" required />
                                                     </label>
                                                 </div>
                                             </div>
@@ -263,16 +267,21 @@
                         </div>
                     </div>
                 </section>
+                <figure class="links-wrapper">
+                    <figcaption>
+                        <h2>Links</h2>
+                    </figcaption>
+                    <ol class="footer-links">
+                        <li><a class="user-link" href="userProfile.html">My profile</a></li>
+                        <li><a class="admin-link hide" href="userProfile.html">Recent Rentals</a></li>
+                        <li><a class="admin-link hide" href="index.html">Manage Users</a></li>
+                        <li><a class="admin-link hide" href="index.html">Manage Fleet</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="view-cars.html">All Cars</a></li>
+                    </ol>
+                </figure>
                 <div class="links-and-socials-wrapper">
-                    <figure class="links-wrapper">
-                        <figcaption>
-                            <h2>Links</h2>
-                        </figcaption>
-                        <ol class="footer-links">
-                            <li><a>All Cars</a></li>
-                            <li><a>About us</a></li>
-                        </ol>
-                    </figure>
+
                     <div class="socials-wrapper">
                         <h2>Get in touch</h2>
                         <p>Email us at: contact@azoomrental.sg</p>

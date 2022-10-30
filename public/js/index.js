@@ -1,8 +1,9 @@
-navBtn = document.querySelector(".menu-button");
-
+const navBtn = document.querySelector(".menu-button");
+const navOverlay = document.querySelector(".nav-overlay-links");
 if (navBtn) {
   navBtn.addEventListener("click", () => {
-    console.log(navBtn.classList.toggle("change"));
+    navOverlay.classList.toggle("open");
+    navBtn.classList.toggle("change");
   });
 }
 

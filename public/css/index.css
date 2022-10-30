@@ -52,7 +52,17 @@ a {
     display: inline;
 }
 
-section {
+.main-wrapper #content h1,
+.main-wrapper #content h2,
+.main-wrapper #content h3,
+.main-wrapper #content h4,
+.main-wrapper #content h5,
+.main-wrapper #content h6 {
+    color: #027373;
+}
+
+.constainer section,
+.main-wrapper section {
     padding: 10px;
 }
 
@@ -139,9 +149,15 @@ body.stop-transition * {
 .landing-cta {
     font-size: xx-large;
     font-weight: 500;
-    border-radius: 3px;
-    padding: 5px;
-    background-color: #049DBF;
+    border-radius: 5px;
+    padding: 15px 30px;
+    background-color: #04BFAD;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 0.1px 8px rgb(35, 35, 35);
+}
+
+.landing-cta:hover {
+    background-color: #027373;
 }
 
 .reviews-section {
@@ -170,8 +186,8 @@ body.stop-transition * {
 }
 
 .card.review {
-    min-width: 30vw;
-    min-height: 30vh;
+    min-width: 20vw;
+    min-height: 20vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -194,20 +210,13 @@ body.stop-transition * {
     min-width: 20px;
 }
 
-.about-us-wrapper {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 60px 1fr;
-    gap: 10px;
-    grid-template-areas: "header header header"
-        "img img content";
-}
 
 .about-us-img-wrapper {
     grid-area: img;
 }
 
-.about-us-header {
+.about-us-header,
+.pricing-header {
     grid-area: header;
     font-size: 1.85rem;
 }
@@ -219,12 +228,6 @@ body.stop-transition * {
     padding: 10px;
 }
 
-.links-and-socials-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 10px;
-}
 
 .links-and-socials-wrapper svg {
     padding: 5px;
@@ -232,9 +235,12 @@ body.stop-transition * {
 
 
 
-.about-us-content p {
-    font-weight: 500;
-    font-size: 1.5rem;
+.about-us-content p,
+.pricing-wrapper .pricing-content {
+    font-weight: 400;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #555555;
 }
 
 p.tagline {
@@ -245,4 +251,8 @@ p.tagline {
 
 #id-button {
     background: none;
+}
+
+.card.review p {
+    font-size: 1.2rem;
 }

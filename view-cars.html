@@ -56,7 +56,6 @@
                 <button class="filter-toggle">Filter</button>
 
                 <div class="filters">
-                    <h2>Filters</h2>
                     <div class=" filter-choices">
                         <figure>
                             <figcaption>
@@ -132,18 +131,14 @@
                                     <input type="checkbox" name="brand" id="bmw" value="bmw">
                                     <label for="bmw">Luxury SUV</label>
                                 </li>
-                                <li>
-                                    <input type="checkbox" name="brand" id="bmw" value="bmw">
-                                    <label for="bmw">Supercar</label>
-                                </li>
                             </ul>
                     </div>
                     </figure>
-                    <div class="filter-btn-grp">
+                    <div class="filter-btn-grp" style="margin-top: 20px;">
 
                         <button class="btn" id="cancel">Cancel</button>
                         <button class="btn" id="reset">Reset</button>
-                        <button class="btn" is="submit">Submit</button>
+                        <button class="btn" id="submit" onclick="filter()">Submit</button>
 
                     </div>
                 </div>
@@ -321,16 +316,21 @@
                         </div>
                     </div>
                 </section>
+                <figure class="links-wrapper">
+                    <figcaption>
+                        <h2>Links</h2>
+                    </figcaption>
+                    <ol class="footer-links">
+                        <li><a class="user-link" href="userProfile.html">My profile</a></li>
+                        <li><a class="admin-link hide" href="userProfile.html">Recent Rentals</a></li>
+                        <li><a class="admin-link hide" href="index.html">Manage Users</a></li>
+                        <li><a class="admin-link hide" href="index.html">Manage Fleet</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="view-cars.html">All Cars</a></li>
+                    </ol>
+                </figure>
                 <div class="links-and-socials-wrapper">
-                    <figure class="links-wrapper">
-                        <figcaption>
-                            <h2>Links</h2>
-                        </figcaption>
-                        <ol class="footer-links">
-                            <li><a>All Cars</a></li>
-                            <li><a>About us</a></li>
-                        </ol>
-                    </figure>
+
                     <div class="socials-wrapper">
                         <h2>Get in touch</h2>
                         <p>Email us at: contact@azoomrental.sg</p>

@@ -9,12 +9,16 @@ footer {
 .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "findus . links-and-socials ";
+    grid-template-rows: 1fr;
+    grid-template-areas: "findus links socials ";
+    align-items: start;
     color: rgb(193,
             212,
             217);
     font-weight: 400;
     padding: 20px;
+    gap: 20px;
+    justify-items: center;
 }
 
 .find-us-wrapper {
@@ -32,9 +36,9 @@ footer {
 @media only screen and (max-width: 768px) {
     .footer {
         display: grid;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas: "findus"
-            "links-and-socials ";
+            "links" "socials ";
         color: rgba(196, 237, 242, 1);
         padding: 20px;
     }
@@ -89,14 +93,15 @@ footer {
     font-size: 1.60rem;
 }
 
-.links-and-socials-wrapper {
-    grid-area: links-and-socials;
-    display: flex;
-    flex-direction: column;
-}
-
 .links-wrapper {
+    grid-area: links;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+}
+
+.links-and-socials-wrapper {
+    grid-area: socials;
+    display: flex;
+    flex-direction: column;
 }

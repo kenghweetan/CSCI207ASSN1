@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="public/css/video-overlay.css">
     <link rel="stylesheet" href="public/css/modal.css">
     <link rel="stylesheet" href="public/css/login.css">
+    <link rel="stylesheet" href="public/css/pricing.css">
     <link rel="stylesheet" href="public/css/footer.css">
     <title>Car Rental</title>
 </head>
@@ -23,14 +24,14 @@
             <nav class="nav-container">
                 <div class="backdrop-animate"></div>
                 <ul>
-                    <li class="nav-link"><a href="search.html">Brand</a></li>
-                    <li class="nav-link"><a href="cars.html">Cars</a></li>
+                    <li class="nav-link active"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="view-cars.html">Cars</a></li>
                     <li class="nav-link user-profile-link hide"><a href="userProfile.html"><svg class="user-icon"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#FFF">
                                 <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                 <path
                                     d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                            </svg></a></li>
+                            </svg> Profile</a></li>
                     <li class="nav-link login"><button id="login-button">Login</button></li>
                     <li class="nav-link signout hide"><button id="signout-button">Sign out</button></li>
                 </ul>
@@ -40,9 +41,7 @@
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </label>
-                <ul class="nav-overlay-links">
 
-                </ul>
             </nav>
 
         </nav>
@@ -64,6 +63,50 @@
         </div>
         <div class="main-wrapper">
             <div id="content">
+                <section class="about-us-wrapper">
+                    <h2 class="about-us-header">About us</h2>
+                    <div class="about-us-content">
+                        <p class="tagline">No gas, no engine, no problem.</p>
+                        <p>Affordable and convenient. </p>
+                        <p>That's the way we'd describe our fleet of electric cars.</p>
+                        <p>Our rental
+                            website
+                            makes it easy to find a car by model, price or date of pick up.</p>
+
+                        <p>All cars are 100% electric
+                            with no
+                            gas or diesel engine under the hood!</p>
+                    </div>
+                </section>
+                <section class="pricing-wrapper">
+                    <h2 class="pricing-header">Our rates</h2>
+                    <p class="pricing-content">We offer
+                        equal rates in our fleet that include insurance coverage and unlimited miles.</p>
+                    <div class="pricing">
+                        <div class="l-container">
+                            <div class="b-price-card">
+                                <div class="b-price-card__cover">
+                                    <!--                          <div class="b-price-card-price"> -->
+                                    <h5 class="tier">Daily</h5>
+                                    <p class="price"><sup>$</sup>60<sub>/day</sub></p>
+                                    <!--                        </div> -->
+                                </div>
+                            </div>
+                            <div class="b-price-card">
+                                <div class="b-price-card__cover">
+                                    <h5 class="tier">Weekly</h5>
+                                    <p class="price"><sup>$</sup>400<sub>/wk</sub></p>
+                                </div>
+                            </div>
+                            <div class="b-price-card">
+                                <div class="b-price-card__cover">
+                                    <h5 class="tier">Monthly</h5>
+                                    <p class="price"><sup>$</sup>1600<sub>/mo</sub></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section>
                     <figure id="partners">
                         <figcaption>
@@ -115,23 +158,7 @@
                         </ol>
                     </figure>
                 </section>
-                <section class="about-us-wrapper">
-                    <h2 class="about-us-header">About us</h2>
-                    <div class="about-us-img-wrapper"><img src="public/pics/cee4f0b6c38b4c31880713eba659f337.jpg"></div>
-                    <div class="about-us-content">
-                        <p class="tagline">No gas, no engine, no problem.</p>
-                        <p>Affordable and convenient. </p>
-                        <p>That's the way we'd describe our fleet of electric cars.</p>
-                        <p>Our rental
-                            website
-                            makes it easy to find a car by model, price or date of pick up.</p>
-                        <p>We offer
-                            low weekly rates that include insurance coverage and unlimited miles.</p>
-                        <p>All cars are 100% electric
-                            with no
-                            gas or diesel engine under the hood!</p>
-                    </div>
-                </section>
+
             </div>
         </div>
         <footer>
@@ -161,16 +188,21 @@
                         </div>
                     </div>
                 </section>
+                <figure class="links-wrapper">
+                    <figcaption>
+                        <h2>Links</h2>
+                    </figcaption>
+                    <ol class="footer-links">
+                        <li><a class="user-link" href="userProfile.html">My profile</a></li>
+                        <li><a class="admin-link hide" href="userProfile.html">Recent Rentals</a></li>
+                        <li><a class="admin-link hide" href="index.html">Manage Users</a></li>
+                        <li><a class="admin-link hide" href="index.html">Manage Fleet</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="view-cars.html">All Cars</a></li>
+                    </ol>
+                </figure>
                 <div class="links-and-socials-wrapper">
-                    <figure class="links-wrapper">
-                        <figcaption>
-                            <h2>Links</h2>
-                        </figcaption>
-                        <ol class="footer-links">
-                            <li><a>All Cars</a></li>
-                            <li><a>About us</a></li>
-                        </ol>
-                    </figure>
+
                     <div class="socials-wrapper">
                         <h2>Get in touch</h2>
                         <p>Email us at: contact@azoomrental.sg</p>
@@ -271,7 +303,18 @@
             </div>
         </div>
 
-
+        <ul class="nav-overlay-links">
+            <li class="nav-link active"><a href="index.html">Brand</a></li>
+            <li class="nav-link"><a href="view-cars.html">Cars</a></li>
+            <li class="nav-link user-profile-link hide"><a href="userProfile.html"><svg class="user-icon"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#FFF">
+                        <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path
+                            d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+                    </svg> Profile</a></li>
+            <li class="nav-link login"><button id="login-button">Login</button></li>
+            <li class="nav-link signout hide"><button id="signout-button">Sign out</button></li>
+        </ul>
 
 
     </div>

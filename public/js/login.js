@@ -70,7 +70,15 @@ const signOutBtn = document.querySelector("#signout-button");
 signOutBtn.addEventListener("click", handleSignout);
 
 function handleLogin(event) {
-  localStorage.setItem("username", "Tan Keng Hwee");
+  const emailField = document.getElementById("email");
+  if (emailField) {
+    if (emailField.value === "admin@azoom.com") {
+      localStorage.setItem("username", "admin");
+    } else {
+      localStorage.setItem("username", "user");
+    }
+  }
+
   console.log("hi");
   closeDialog();
   document.querySelector(".nav-link.hide").classList.remove("hide");

@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="public/css/car-details.css">
     <link rel="stylesheet" href="public/css/card.css">
     <link rel="stylesheet" href="public/css/button.css">
-    <link rel="stylesheet" href="public/css/modal.css">
     <link rel="stylesheet" href="public/css/datetime-picker.css">
     <link rel="stylesheet" href="public/css/footer.css">
 </head>
@@ -24,18 +23,23 @@
 <body>
     <div class="root">
         <nav id="navbar" class="navbar-home">
-            <div>AZOOM.CARRENTAL</div>
+            <div><img style="max-width: 200px;" src="public/pics/Screenshot_2022-10-30_204311-removebg-preview.png">
+            </div>
             <nav class="nav-container">
                 <div class="backdrop-animate"></div>
                 <ul>
-                    <li class="nav-link"><a href="search.html">Brand</a></li>
-                    <li class="nav-link"><a href="cars.html">Cars</a></li>
+                    <li class="nav-link active"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="view-cars.html">Cars</a></li>
+                    <li><a class="nav-link user-link hide" href="userProfile.html">My profile</a></li>
+                    <li><a class="nav-link admin-link hide" href="userProfile.html">Recent Rentals</a></li>
+                    <li><a class="nav-link admin-link hide" href="index.html">Manage Users</a></li>
+                    <li><a class="nav-link admin-link hide" href="index.html">Manage Fleet</a></li>
                     <li class="nav-link user-profile-link hide"><a href="userProfile.html"><svg class="user-icon"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#FFF">
                                 <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                 <path
                                     d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                            </svg></a></li>
+                            </svg> Profile</a></li>
                     <li class="nav-link login"><button id="login-button">Login</button></li>
                     <li class="nav-link signout hide"><button id="signout-button">Sign out</button></li>
                 </ul>
@@ -45,9 +49,7 @@
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </label>
-                <ul class="nav-overlay-links">
 
-                </ul>
             </nav>
 
         </nav>
@@ -122,15 +124,15 @@
                                 </div>
                                 <div>
                                     <h3>Rental Rate</h3>
-                                    <select id="pickupLocation">
+                                    <select id="rental">
                                         <option value="Daily">
-                                            Daily
+                                            Daily - $80/day
                                         </option>
                                         <option value="Weekly">
-                                            Weekly
+                                            Weekly - $400/wk
                                         </option>
                                         <option value="Monthly">
-                                            Monthly
+                                            Monthly - $2000/mo
                                         </option>
                                     </select>
                                 </div>
@@ -188,7 +190,6 @@
                             style="border:0;" allowfullscreen="" loading="lazy" class="map1"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <div class="address1">
-                            <h3>Toa Payoh Branch</h3>
                             <p>5 Toa Payoh W</p>
                             <p>#04-02 Motorway Building</p>
                             <p>Singapore 318877</p>
@@ -200,27 +201,27 @@
                             style="border:0;" allowfullscreen="" loading="lazy" class="map2"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <div class="address2">
-                            <h3>Serangoon Branch</h3>
                             <p>Block 546A</p>
                             <p>Serangoon North Ave 3</p>
                             <p>Singapore 551546</p>
                         </div>
                     </div>
                 </section>
+                <figure class="links-wrapper">
+                    <figcaption>
+                        <h2>Links</h2>
+                    </figcaption>
+                    <ol class="footer-links">
+                        <li><a class="nav-link user-link hide" href="userProfile.html">My profile</a></li>
+                        <li><a class=" nav-link admin-link hide" href="admin.html">Recent Rentals</a></li>
+                        <li><a class=" nav-link admin-link hide" href="index.html">Manage Users</a></li>
+                        <li><a class=" nav-link admin-link hide" href="index.html">Manage Fleet</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="view-cars.html">All Cars</a></li>
+                    </ol>
+                </figure>
                 <div class="links-and-socials-wrapper">
-                    <figure class="links-wrapper">
-                        <figcaption>
-                            <h2>Links</h2>
-                        </figcaption>
-                        <ol class="footer-links">
-                            <li><a class="user-link" href="userProfile.html">My profile</a></li>
-                            <li><a class="admin-link hide" href="userProfile.html">Recent Rentals</a></li>
-                            <li><a class="admin-link hide" href="index.html">Manage Users</a></li>
-                            <li><a class="admin-link hide" href="index.html">Manage Fleet</a></li>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="view-cars.html">All Cars</a></li>
-                        </ol>
-                    </figure>
+
                     <div class="socials-wrapper">
                         <h2>Get in touch</h2>
                         <p>Email us at: contact@azoomrental.sg</p>
@@ -322,10 +323,11 @@
         </div>
 
     </div>
+    <script src="public/js/car-details.js"></script>
     <script src="public/js/index.js"></script>
     <script src="public/js/carousel.js"></script>
     <script src="public/js/login.js"></script>
-    <script src="public/js/car-details.js"></script>
+
 </body>
 
 </html>

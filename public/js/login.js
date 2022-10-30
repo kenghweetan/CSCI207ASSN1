@@ -100,4 +100,19 @@ function isLoggedIn() {
   document.querySelector(".nav-link.hide").classList.remove("hide");
   document.querySelector(".nav-link.signout").classList.remove("hide");
   document.querySelector(".nav-link.login").classList.add("hide");
+  if (localStorage.getItem("username") === "admin") {
+    document.querySelectorAll(".admin-link").forEach((element) => {
+      element.classList.remove("hide");
+    });
+    document.querySelectorAll(".user-link").forEach((element) => {
+      element.classList.add("hide");
+    });
+  } else {
+    document.querySelectorAll(".user-link").forEach((element) => {
+      element.classList.remove("hide");
+    });
+    document.querySelectorAll(".admin-link").forEach((element) => {
+      element.classList.add("hide");
+    });
+  }
 }

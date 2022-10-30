@@ -151,13 +151,13 @@ body.stop-transition * {
     font-weight: 500;
     border-radius: 5px;
     padding: 15px 30px;
-    background-color: #04BFAD;
+    background-color: rgb(216, 104, 0);
     transition: all 0.25s ease-in-out;
     box-shadow: 0 0.1px 8px rgb(35, 35, 35);
 }
 
 .landing-cta:hover {
-    background-color: #027373;
+    background-color: rgb(180, 96, 0);
 }
 
 .reviews-section {
@@ -240,13 +240,14 @@ body.stop-transition * {
     font-weight: 400;
     font-size: 1.3rem;
     text-align: center;
-    color: #555555;
+    color: #333333;
 }
 
 p.tagline {
-    color: rgb(216, 104, 0);
+    /*     color: rgb(216, 104, 0); */
     font-weight: 800;
     font-size: 3rem;
+    color: #333333;
 }
 
 #id-button {

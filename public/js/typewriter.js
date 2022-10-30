@@ -1,7 +1,7 @@
 const message = document.querySelector("#message");
-var quoteArray = ["Fast.", "Far.", "Electric."];
+var quoteArray = ["Fast.", "Far.", "Green."];
 var textPosition = 0;
-var speed = 200;
+var speed = 150;
 
 async function typewriter(quote) {
   let textPosition = 0;
@@ -10,7 +10,7 @@ async function typewriter(quote) {
     await timeout(speed);
   }
 
-  await timeout(2000);
+  await timeout(1500);
 
   while (textPosition >= 0) {
     message.innerHTML = quote.substr(0, textPosition--);

@@ -81,6 +81,12 @@ footer {
     border-radius: 10px;
 }
 
+.footer-links a {
+    color: rgb(193,
+            212,
+            217);
+}
+
 .instagram {
     fill: url(#rg);
 }

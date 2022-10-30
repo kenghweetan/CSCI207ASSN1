@@ -245,9 +245,12 @@ form .login-modal-btn input[type="submit"] {
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
-  background-color: rgb(2, 115, 115);
+  background-color: rgb(216, 104, 0);
 }
 
+form .login-modal-btn input[type="submit"]:hover {
+  background-color: rgb(180, 96, 0);
+}
 
 .login-modal {
   display: none;

@@ -20,12 +20,17 @@
 <body>
     <div class="root">
         <nav id="navbar" class="navbar-home">
-            <div>AZOOM.CARRENTAL</div>
+            <div><img style="max-width: 200px;" src="public/pics/Screenshot_2022-10-30_204311-removebg-preview.png">
+            </div>
             <nav class="nav-container">
                 <div class="backdrop-animate"></div>
                 <ul>
                     <li class="nav-link active"><a href="index.html">Home</a></li>
                     <li class="nav-link"><a href="view-cars.html">Cars</a></li>
+                    <li><a class="nav-link user-link hide" href="userProfile.html">My profile</a></li>
+                    <li><a class="nav-link admin-link hide" href="userProfile.html">Recent Rentals</a></li>
+                    <li><a class="nav-link admin-link hide" href="index.html">Manage Users</a></li>
+                    <li><a class="nav-link admin-link hide" href="index.html">Manage Fleet</a></li>
                     <li class="nav-link user-profile-link hide"><a href="userProfile.html"><svg class="user-icon"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#FFF">
                                 <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
@@ -63,32 +68,21 @@
         </div>
         <div class="main-wrapper">
             <div id="content">
-                <section class="about-us-wrapper">
-                    <h2 class="about-us-header">About us</h2>
-                    <div class="about-us-content">
-                        <p class="tagline">No gas, no engine, no problem.</p>
-                        <p>Affordable and convenient. </p>
-                        <p>That's the way we'd describe our fleet of electric cars.</p>
-                        <p>Our rental
-                            website
-                            makes it easy to find a car by model, price or date of pick up.</p>
 
-                        <p>All cars are 100% electric
-                            with no
-                            gas or diesel engine under the hood!</p>
-                    </div>
-                </section>
                 <section class="pricing-wrapper">
                     <h2 class="pricing-header">Our rates</h2>
                     <p class="pricing-content">We offer
                         equal rates in our fleet that include insurance coverage and unlimited miles.</p>
+                    <p class="pricing-content">Conveniently reserve a car with your Credit card and pick it
+                        up from either of our 2 offices.</p>
+                    <p class="pricing-content">Then drop it off at any of our designated carparks when you're done!</p>
                     <div class="pricing">
                         <div class="l-container">
                             <div class="b-price-card">
                                 <div class="b-price-card__cover">
                                     <!--                          <div class="b-price-card-price"> -->
                                     <h5 class="tier">Daily</h5>
-                                    <p class="price"><sup>$</sup>60<sub>/day</sub></p>
+                                    <p class="price"><sup>$</sup>80<sub>/day</sub></p>
                                     <!--                        </div> -->
                                 </div>
                             </div>
@@ -107,6 +101,21 @@
                         </div>
                     </div>
                 </section>
+                <section class="about-us-wrapper">
+                    <h2 class="about-us-header">About us</h2>
+                    <div class="about-us-content">
+                        <p class="tagline">No gas, no engine, no problem.</p>
+                        <p>At AZoom, we believe everyone should be able to get from A to Z quickly in an eco-friendly
+                            way.</p>
+                        <p>By providing a simple, and accessible
+                            electric car rental service, we empower our community to access eco-conscious cars whenever
+                            they
+                            want.</p>
+                        <p>In doing so, we seek to
+                            create an ecosystem where mobility is shared and sustainable for all.</p>
+
+                    </div>
+                </section>
                 <section>
                     <figure id="partners">
                         <figcaption>
@@ -117,7 +126,7 @@
 
                             <li><img src="public/pics/Hyundai-logo.png"></li>
 
-                            <li><img src="public/pics/download.png"></li>
+                            <li><img src="public/pics/Kia_Logo_2021.png"></li>
 
                             <li><img src="public/pics/nissan-logo-2020-black.png"></li>
                         </ul>
@@ -138,7 +147,7 @@
 
                             <li>
                                 <div class="card review">
-                                    <p>Excellent prices!</p>
+                                    <p>The cars are well maintained and clean.</p>
                                     <p>- Kelvin Lim</p>
                                 </div>
                             </li>
@@ -151,7 +160,7 @@
                             </li>
                             <li>
                                 <div class="card review">
-                                    <p>Affordable.</p>
+                                    <p>The pickup and drop off was hassle free. Would book again!</p>
                                     <p>- Hock Lim Teo</p>
                                 </div>
                             </li>
@@ -193,10 +202,10 @@
                         <h2>Links</h2>
                     </figcaption>
                     <ol class="footer-links">
-                        <li><a class="user-link" href="userProfile.html">My profile</a></li>
-                        <li><a class="admin-link hide" href="userProfile.html">Recent Rentals</a></li>
-                        <li><a class="admin-link hide" href="index.html">Manage Users</a></li>
-                        <li><a class="admin-link hide" href="index.html">Manage Fleet</a></li>
+                        <li><a class="nav-link user-link hide" href="userProfile.html">My profile</a></li>
+                        <li><a class=" nav-link admin-link hide" href="admin.html">Recent Rentals</a></li>
+                        <li><a class=" nav-link admin-link hide" href="index.html">Manage Users</a></li>
+                        <li><a class=" nav-link admin-link hide" href="index.html">Manage Fleet</a></li>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="view-cars.html">All Cars</a></li>
                     </ol>
@@ -261,7 +270,7 @@
                     <div class="form-inner">
                         <form onsubmit="handleLogin(event); return false" class="login">
                             <div class="field">
-                                <input type="text" placeholder="Email Address" required>
+                                <input type="text" id="email" placeholder="Email Address" required>
                             </div>
                             <div class="field">
                                 <input type="password" placeholder="Password" required>
@@ -279,7 +288,7 @@
                                     <input type="text" id="fname" placeholder="Name" required>
                                 </div>
                                 <div class="field">
-                                    <input type="text" placeholder="Email Address" required>
+                                    <input type="text" id="email" placeholder="Email Address" required>
                                 </div>
                                 <div class="field">
                                     <input type="password" placeholder="Password" required>

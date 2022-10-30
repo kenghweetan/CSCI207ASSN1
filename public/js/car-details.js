@@ -5,6 +5,7 @@ document
   .addEventListener("change", handleChange);
 
 function handleChange(event) {
+  console.log("hi");
   const selection = event.target.value;
   if (selection.toLocaleUpperCase() === "SERANGOON BRANCH") {
     document.getElementById("toa-payoh-map").style.display = "none";

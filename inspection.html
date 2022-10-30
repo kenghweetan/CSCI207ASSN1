@@ -24,7 +24,8 @@
 <body>
     <div class="root">
         <nav id="navbar" class="navbar-home">
-            <div>AZOOM.CARRENTAL</div>
+            <div><img style="max-width: 200px;" src="public/pics/Screenshot_2022-10-30_204311-removebg-preview.png">
+            </div>
             <nav class="nav-container">
                 <div class="backdrop-animate"></div>
                 <ul>
@@ -108,7 +109,7 @@
                     <div class="line-item"><span>GST (7%)</span><span class="gst">$11.20</span></div>
                     <div class="line-item"><span>Total</span><span class="total">$171.20</span></div>
                 </div>
-                <button id="invoice-button" class="btn">Send via Email</button>
+                <button id="invoice-button" class="btn">Send Invoice</button>
             </div>
         </div>
         <footer>
@@ -138,16 +139,21 @@
                         </div>
                     </div>
                 </section>
+                <figure class="links-wrapper">
+                    <figcaption>
+                        <h2>Links</h2>
+                    </figcaption>
+                    <ol class="footer-links">
+                        <li><a class="nav-link user-link hide" href="userProfile.html">My profile</a></li>
+                        <li><a class=" nav-link admin-link hide" href="admin.html">Recent Rentals</a></li>
+                        <li><a class=" nav-link admin-link hide" href="index.html">Manage Users</a></li>
+                        <li><a class=" nav-link admin-link hide" href="index.html">Manage Fleet</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="view-cars.html">All Cars</a></li>
+                    </ol>
+                </figure>
                 <div class="links-and-socials-wrapper">
-                    <figure class="links-wrapper">
-                        <figcaption>
-                            <h2>Links</h2>
-                        </figcaption>
-                        <ol class="footer-links">
-                            <li><a href="view-cars.html">All Cars</a></li>
-                            <li><a>About us</a></li>
-                        </ol>
-                    </figure>
+
                     <div class="socials-wrapper">
                         <h2>Get in touch</h2>
                         <p>Email us at: contact@azoomrental.sg</p>
@@ -182,8 +188,6 @@
 
                 </div>
             </div>
-
-
         </footer>
     </div>
     <div class="invoice-modal">
@@ -264,7 +268,6 @@
         </div>
 
     </div>
-    <script src="public/js/inspection.js"></script>
     <script src="public/js/index.js"></script>
     <script src="public/js/login.js"></script>
 </body>

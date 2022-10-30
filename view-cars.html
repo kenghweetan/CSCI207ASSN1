@@ -23,18 +23,23 @@
 
     <div class="root">
         <nav id="navbar" class="navbar-home">
-            <div>AZOOM.CARRENTAL</div>
+            <div><img style="max-width: 200px;" src="public/pics/Screenshot_2022-10-30_204311-removebg-preview.png">
+            </div>
             <nav class="nav-container">
                 <div class="backdrop-animate"></div>
                 <ul>
-                    <li class="nav-link"><a href="search.html">Brand</a></li>
-                    <li class="nav-link"><a href="cars.html">Cars</a></li>
+                    <li class="nav-link active"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="view-cars.html">Cars</a></li>
+                    <li><a class="nav-link user-link hide" href="userProfile.html">My profile</a></li>
+                    <li><a class="nav-link admin-link hide" href="userProfile.html">Recent Rentals</a></li>
+                    <li><a class="nav-link admin-link hide" href="index.html">Manage Users</a></li>
+                    <li><a class="nav-link admin-link hide" href="index.html">Manage Fleet</a></li>
                     <li class="nav-link user-profile-link hide"><a href="userProfile.html"><svg class="user-icon"
                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="#FFF">
                                 <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                                 <path
                                     d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
-                            </svg></a></li>
+                            </svg> Profile</a></li>
                     <li class="nav-link login"><button id="login-button">Login</button></li>
                     <li class="nav-link signout hide"><button id="signout-button">Sign out</button></li>
                 </ul>
@@ -44,9 +49,7 @@
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </label>
-                <ul class="nav-overlay-links">
 
-                </ul>
             </nav>
 
         </nav>
@@ -136,7 +139,7 @@
                     </figure>
                     <div class="filter-btn-grp" style="margin-top: 20px;">
 
-                        <button class="btn" id="cancel">Cancel</button>
+                        <button class="btn" id="cancel">Close</button>
                         <button class="btn" id="reset">Reset</button>
                         <button class="btn" id="submit" onclick="filter()">Submit</button>
 
@@ -321,10 +324,10 @@
                         <h2>Links</h2>
                     </figcaption>
                     <ol class="footer-links">
-                        <li><a class="user-link" href="userProfile.html">My profile</a></li>
-                        <li><a class="admin-link hide" href="userProfile.html">Recent Rentals</a></li>
-                        <li><a class="admin-link hide" href="index.html">Manage Users</a></li>
-                        <li><a class="admin-link hide" href="index.html">Manage Fleet</a></li>
+                        <li><a class="nav-link user-link hide" href="userProfile.html">My profile</a></li>
+                        <li><a class=" nav-link admin-link hide" href="admin.html">Recent Rentals</a></li>
+                        <li><a class=" nav-link admin-link hide" href="index.html">Manage Users</a></li>
+                        <li><a class=" nav-link admin-link hide" href="index.html">Manage Fleet</a></li>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="view-cars.html">All Cars</a></li>
                     </ol>

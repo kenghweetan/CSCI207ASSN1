@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  console.log(localStorage.getItem("username"));
   if (localStorage.getItem("username")) {
     isLoggedIn();
   }
@@ -70,6 +71,7 @@ const signOutBtn = document.querySelector("#signout-button");
 signOutBtn.addEventListener("click", handleSignout);
 
 function handleLogin(event) {
+  console.log("hi");
   const emailField = document.getElementById("email");
   if (emailField) {
     if (emailField.value === "admin@azoom.com") {
@@ -77,6 +79,9 @@ function handleLogin(event) {
     } else {
       localStorage.setItem("username", "user");
     }
+  } else {
+    console.log("user");
+    localStorage.setItem("username", "user");
   }
 
   console.log("hi");

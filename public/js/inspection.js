@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.getElementById("show-inspection").addEventListener("click", () => {
+  console.log("hi");
   document.querySelector(".icon-in-button").classList.toggle("show");
   document.querySelector(".inspection-info").classList.toggle("show");
 });
